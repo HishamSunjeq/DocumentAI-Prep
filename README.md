@@ -2,9 +2,11 @@
 
 A complete, GPU-accelerated pipeline for processing business documents and generating high-quality question-answer pairs for chatbot training.
 
+# 📚 Document AI Prep
+
 ## Installation & Setup
 
-### Setup guide: [Setup Guide](setup_guide.md)
+### Setup guide: [Setup Guide](doc/setup_guide.md)
 
 ## 🚀 Quick Start
 
@@ -38,6 +40,8 @@ A complete, GPU-accelerated pipeline for processing business documents and gener
 ├── setup_data_prep.bat     # One-time setup script
 └── start_data_prep.bat  # Run with detailed output
 ```
+
+## 📜 Full diagram: [Project Diagram](docs/project_diagram.md)
 
 ## 🔄 Pipeline Steps
 
