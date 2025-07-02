@@ -69,6 +69,8 @@ flowchart TD
 
 [![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](https://raw.githubusercontent.com/youruser/yourrepo/main/docs/diagrams/system_architecture.png)
 
+[![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](docs/diagrams/system_architecture.png)
+
 ```mermaid
 graph TB
     subgraph "🖥️ System Environment"
