@@ -2,9 +2,9 @@
 
 ## 🔄 Complete Pipeline Flow Diagram
 
-![Pipeline Flow](docs/diagrams/pipeline_flow.png)
+[![Download Pipeline Flow Diagram](https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge)](../diagrams/pipeline_flow.png)
 
-```mermaid
+<img src="../diagrams/pipeline_flow.png" alt="Pipeline Flow Diagram" style="max-width: 100%; border: 1px solid #ccc; margin-top: 1em;">
 flowchart TD
     %% Input Layer
     A[📄 Input Documents<br/>data/] --> B{📋 File Types}
@@ -57,7 +57,8 @@ flowchart TD
     class C1,D1,F,H,J output
     class B,E1,G1 decision
     class K final
-```
+
+````
 
 ## 🏗️ System Architecture Diagram
 
@@ -66,8 +67,6 @@ flowchart TD
 </a>
 
 [![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](https://raw.githubusercontent.com/youruser/yourrepo/main/docs/diagrams/system_architecture.png)
-
-[![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](docs/diagrams/system_architecture.png)
 
 ```mermaid
 graph TB
@@ -167,7 +166,7 @@ graph TB
     class MAIN,INSP,OCR,CHUNK,QA,CLEAN,FIX,TEST,TESTGPU processing
     class OLLAMA,SENT,TESSERACT ai
     class GPU,CPU,MEM hardware
-```
+````
 
 ## 📊 Data Flow & File Structure
 
