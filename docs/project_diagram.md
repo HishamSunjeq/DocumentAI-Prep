@@ -67,6 +67,8 @@ flowchart TD
   <img src="https://img.shields.io/badge/📥_Download-System_Architecture-green?style=for-the-badge" alt="Download System Architecture Diagram">
 </a>
 
+[![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](https://raw.githubusercontent.com/youruser/yourrepo/main/docs/diagrams/system_architecture.png)
+
 ```mermaid
 graph TB
     subgraph "🖥️ System Environment"
