@@ -2,6 +2,8 @@
 
 ## 🔄 Complete Pipeline Flow Diagram
 
+[![Download Pipeline Flow Diagram](https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVVE1vwjAM_StRzgM6xqAf4sKQoGjbpGnauE0cTOI2HokT0mRj6vbf16R8qIDNHHrw-9n2s58zEy3HZCBJrfgGQgNLQXJfqzrYgKO1t91sFGpLxNEEYUAoIAU8_PjBxKzIpGGCUOCzgWEzA2G7PwDjE7nI5_NoLpPZxb2FnVg7-n1DLhDJHTRaYmZtaR8JrKPdEWJY_N-gNsLZMaG8Eq7lAkKpWVN-eSWMvqX1QYOjKDfvQoUCTAoqh0SpRLrCO6KZw0QZnmOTJWjnhHm6uLaRvI_eRZQZr9T2g8GCGJRMqGPjVUGwOvPaVmZx7S2K3Zk1qYyNUPVdZcyFKIX4E2KqTKOqiZnXdgWdHMaUKGlQeIEIQKK29d5nxoVsEg-KJlm2NZKQ8aUsKWYZqYE7pqNEJfUGhBBkWz9d6e7qDvZdvBJpEF3eXt_cpjN-fXNxn9wm1zf2gE45rYFO9KcCBDbB-LV8SdmjPwC9F9M-nLYLpWaE2YkiXbW1wY2N0JZ-x9Z-x-JN5eMf2r0fNAn)
+
 ```mermaid
 flowchart TD
     %% Input Layer
@@ -58,6 +60,8 @@ flowchart TD
 ```
 
 ## 🏗️ System Architecture Diagram
+
+[![Download System Architecture Diagram](https://img.shields.io/badge/📥_Download-System_Architecture-green?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVlU1vwjAMQP9KlPMArYABbemFIUHTtmnTtHGbOJjEbTwSJ6TJxtTuv69J-VABm7n04Pfevzc5BylajslAklrxDYQGloLkvlZ1sAFHa2-72SjUloijCcKAUEAKePjxg4lZkUnDBKHAZwPDZgbCdn8Axidykc_n0Vwms4t7CzuxdvT7hlwgkjtotMTM2tI-ElhHuyPEsPi_QW2Es2NCeSVcywWEUrOm_PJKmH1L64MGR1Fu3oUKBZgUVA6JUol0hXdEM4eJMjzHJkvQzgnzdHFtI3kfvYsoM16p7QeDOTEomVDHxquCYHXmta3M4tpbFLszb1IZG6Hqu8qYC1EK8SfEVJlGVRMzru0KOjmMKVHSoPACEYBEbeu9z4wL2SQeFE2ybGskIeNLWVLMMlIDd0xHiUrqDQghyLZ-utLd1R3su3gl0iC6vL2-uU1n_Prm4j65Ta5v7QGdcloD3ehPBQhsgvFr-ZKyR38Aei-mfThtF0rNCLMTRbpqa4ObG6Et_Y6t_Y7Fm8rHP7R7P2gS)
 
 ```mermaid
 graph TB
@@ -161,6 +165,8 @@ graph TB
 
 ## 📊 Data Flow & File Structure
 
+[![Download Data Flow Diagram](https://img.shields.io/badge/📥_Download-Data_Flow_Diagram-purple?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVUk1vwjAM_StRzgO0ggFt6YUhQdO2adK0cZs4mMRtPBInpMnG1O2_r0n5UAGbufTg99n2e5BjkKLlmAwkqRXfQGhgKUjua1UHG3C09rabzUJtiTiaIAwIBaSAhx8_mJgVmTRMEAp8NjBsZiBs9wdgfCIXhTNPptOe_35-w7VQONqFjaNfHIZaLSjWgjsotMTM2tI-ElhHuyPEsPi_QW2Es2NCeSVcywWEUrOm_PJKmH1L64MGR1Fu3oUKBZgUVA6JUol0hXdEM4eJMjzHJkvQzgnzdHFtI3kfvYsoM16p7QeDOTEomVDHxquCYHXmta3M4tpbFLsza1IZG6Hqu8qYC1EK8SfEVJlGVRMzru0KOjmMKVHSoPACEYBEbeu9z4wL2SQeFE2ybGskIeNLWVLMMlIDd0xHiUrqDQghyLZ-utLd1R3su3gl0iC6vL2-uU1n_Prm4j65Ta5v7QGdcloD3ehPBQhsgvFr-ZKyR38Aei-mfThtF0rNCLMTRbpqa4ObG6Et_Y6t_Y7Fm8rHP7R7P2gS)
+
 ```mermaid
 graph LR
     subgraph "📥 Input Layer"
@@ -212,6 +218,8 @@ graph LR
 
 ## 🚀 Execution Flow Diagram
 
+[![Download Execution Flow Diagram](https://img.shields.io/badge/📥_Download-Execution_Flow-orange?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVkk1vwjAMQP9KlPMArYABbemFIUHTtmnTtHGbOJjEbTwSJ6TJxtTuv69J-VABm7n04Pfevzc5BylajslAklrxDYQGloLkvlZ1sAFHa2-72SjUloijCcKAUEAKePjxg4lZkUnDBKHAZwPDZgbCdn8Axidykc_n0Vwms4t7CzuxdvT7hlwgkjtotMTM2tI-ElhHuyPEsPi_QW2Es2NCeSVcywWEUrOm_PJKmH1L64MGR1Fu3oUKBZgUVA6JUol0hXdEM4eJMjzHJkvQzgnzdHFtI3kfvYsoM16p7QeDOTEomVDHxquCYHXmta3M4tpbFLsza1IZG6Hqu8qYC1EK8SfEVJlGVRMzru0KOjmMKVHSoPACEYBEbeu9z4wL2SQeFE2ybGskIeNLWVLMMlIDd0xHiUrqDQghyLZ-utLd1R3su3gl0iC6vL2-uU1n_Prm4j65Ta5v7QGdcloD3ehPBQhsgvFr-ZKyR38Aei-mfThtF0rNCLMTRbpqa4ObG6Et_Y6t_Y7Fm8rHP7R7P2gS)
+
 ```mermaid
 sequenceDiagram
     participant User
@@ -253,6 +261,8 @@ sequenceDiagram
 
 ## 🔧 Tool Dependencies
 
+[![Download Dependencies Diagram](https://img.shields.io/badge/📥_Download-Dependencies_Mindmap-red?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVkk1vwjAMQP9KlPMArYABbemFIUHTtmnTtHGbOJjEbTwSJ6TJxtTuv69J-VABm7n04Pfevzc5BylajslAklrxDYQGloLkvlZ1sAFHa2-72SjUloijCcKAUEAKePjxg4lZkUnDBKHAZwPDZgbCdn8Axidykc_n0Vwms4t7CzuxdvT7hlwgkjtotMTM2tI-ElhHuyPEsPi_QW2Es2NCeSVcywWEUrOm_PJKmH1L64MGR1Fu3oUKBZgUVA6JUol0hXdEM4eJMjzHJkvQzgnzdHFtI3kfvYsoM16p7QeDOTEomVDHxquCYHXmta3M4tpbFLsza1IZG6Hqu8qYC1EK8SfEVJlGVRMzru0KOjmMKVHSoPACEYBEbeu9z4wL2SQeFE2ybGskIeNLWVLMMlIDd0xHiUrqDQghyLZ-utLd1R3su3gl0iC6vL2-uU1n_Prm4j65Ta5v7QGdcloD3ehPBQhsgvFr-ZKyR38Aei-mfThtF0rNCLMTRbpqa4ObG6Et_Y6t_Y7Fm8rHP7R7P2gS)
+
 ```mermaid
 mindmap
   root((DocumentAI-Prep))
@@ -284,6 +294,8 @@ mindmap
 ```
 
 ## 📈 Performance Optimization Flow
+
+[![Download Performance Optimization Diagram](https://img.shields.io/badge/📥_Download-Performance_Optimization-teal?style=for-the-badge)](https://mermaid.ink/img/pako:eNqVlE1vwjAMgP9KlPMArYABbemFIUHTtmnTtHGbOJjEbTwSJ6TJxtTuv69J-VABm7n04Pfevzc5BylajslAklrxDYQGloLkvlZ1sAFHa2-72SjUloijCcKAUEAKePjxg4lZkUnDBKHAZwPDZgbCdn8Axidykc_n0Vwms4t7CzuxdvT7hlwgkjtotMTM2tI-ElhHuyPEsPi_QW2Es2NCeSVcywWEUrOm_PJKmH1L64MGR1Fu3oUKBZgUVA6JUol0hXdEM4eJMjzHJkvQzgnzdHFtI3kfvYsoM16p7QeDOTEomVDHxquCYHXmta3M4tpbFLsza1IZG6Hqu8qYC1EK8SfEVJlGVRMzru0KOjmMKVHSoPACEYBEbeu9z4wL2SQeFE2ybGskIeNLWVLMMlIDd0xHiUrqDQghyLZ-utLd1R3su3gl0iC6vL2-uU1n_Prm4j65Ta5v7QGdcloD3ehPBQhsgvFr-ZKyR38Aei-mfThtF0rNCLMTRbpqa4ObG6Et_Y6t_Y7Fm8rHP7R7P2gS)
 
 ```mermaid
 flowchart TD
@@ -332,6 +344,8 @@ flowchart TD
 ```
 
 ## 📝 Quick Reference
+
+> **💡 Tip**: Click the **📥 Download** buttons above each diagram to get high-quality PNG images for presentations, documentation, or offline viewing!
 
 ### 🚀 Running the Pipeline
 
