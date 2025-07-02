@@ -63,12 +63,6 @@ B --> B3[📄 PPTX Files]
 
 ## 🏗️ System Architecture Diagram
 
-<a href="https://mermaid.live/edit#pako:eNp1VE1PwzAM_StRzgVa2qVft-0ykABpEhOaxLhNHEySOnPILGPJxtDe_Unn0sKEYHezn_2e_ZydUE7JQJJa8Q2EBpaCZIFWtWaBo7W33WwUakvE0QRhQCggBTz8-MHErMikYYJQ4LOBYTMDYTs_AOOJXORlWc5lMlu4d7CJtaPfN-QCkdxBoyVm1pb2kcA62h0hhsX_DWojnB0TyivhWi4glJo15ZdXwuhbWh80OIpy8y5UKMCkoHJIlEqkK7wjmjlMlOE5NlmCdk6Yp4trG8n76F1EmfFKbT8YLIhByYQ6Nl4VBKszr21lFtfeotidWZPK2AhV31XGXIhSiD8hpso0qpqYcW1X0MlhTImSBoUXiAAkalvvfWZcyCbxoGiSZVsjCRlfypJilpEauGM6SlRSb0AIQbb105Xuru5g38UrkQbR5e31zW0649c3F_fJbXJ9aw_olNMa6EZ_KkBgE4xfy5eUPfoD0Hsx7cNpu1BqRpidKNJVWxvc3Aht6Xds7Xcs3lQ-_qHd-0GTA" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-System_Architecture-green?style=for-the-badge" alt="Download System Architecture Diagram">
-</a>
-
-[![Download System Architecture](https://img.shields.io/badge/📥_Download_System_Architecture-green?style=for-the-badge)](https://raw.githubusercontent.com/youruser/yourrepo/main/docs/diagrams/system_architecture.png)
-
 ```mermaid
 graph TB
     subgraph "🖥️ System Environment"
@@ -171,10 +165,6 @@ graph TB
 
 ## 📊 Data Flow & File Structure
 
-<a href="https://mermaid.live/edit#pako:eNp1Uk1PwzAM_StRzgVa2qVft-0ykABpEhOaxLhNHEySOnPILGPJxtDe_Unn0sKEYHezn_2e_ZydUE7JQJJa8Q2EBpaCZIFWtWaBo7W33WwUakvE0QRhQCggBTz8-MHErMikYYJQ4LOBYTMDYTs_AOOJXORlWc5lMlu4d7CJtaPfN-QCkdxBoyVm1pb2kcA62h0hhsX_DWojnB0TyivhWi4glJo15ZdXwuhbWh80OIpy8y5UKMCkoHJIlEqkK7wjmjlMlOE5NlmCdk6Yp4trG8n76F1EmfFKbT8YLIhByYQ6Nl4VBKszr21lFtfeotidWZPK2AhV31XGXIhSiD8hpso0qpqYcW1X0MlhTImSBoUXiAAkalvvfWZcyCbxoGiSZVsjCRlfypJilpEauGM6SlRSb0AIQbb105Xuru5g38UrkQbR5e31zW0649c3F_fJbXJ9aw_olNMa6EZ_KkBgE4xfy5eUPfoD0Hsx7cNpu1BqRpidKNJVWxvc3Aht6Xds7Xcs3lQ-_qHd-0GTA" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-Data_Flow_Diagram-purple?style=for-the-badge" alt="Download Data Flow Diagram">
-</a>
-
 ```mermaid
 graph LR
     subgraph "📥 Input Layer"
@@ -226,10 +216,6 @@ graph LR
 
 ## 🚀 Execution Flow Diagram
 
-<a href="https://mermaid.live/view#pako:eNp1UkFOwzAQ_MrKcwGTpE3zpH0CElJLlZAqcRs_eJ2Na8WreMPQ9vWsk4CKCr3Znd2ZnRmfnExSd0gGUk0k20CoYSlYEWvVJRuwtLY5bTRqS8TJGGFAKCAFPPz4wcSsyKRhglDgs4FhMwNhOz8A44k8qP3Rfuzrr_M7zk9Q9QvkApHcQaMlZtaW9pHAOtodIYbF_w1qI5wdE8or4VouIJSaNeWXV8LoW1ofNDiKcvMuVCjApKBySJRKpCu8I5o5TJThOTZZgnZOmKeLaxvJ--hdRJnxSm0_GCyIQcmEOjZeFQSrM69tZRbX3qLYnVmTytgIVd9VxlyIUog_IabKNKqamHFtV9DJYUyJkgaFF4gAJGpb731mXMgm8aBokmeWRhIyvpQlxSwjNXDHdJSopN6AEIJS66cr3V3dwb6LVyINosvb65vbdMavby7uk9vk-tYe0CmnNdCN_lSAwCYYv5YvKXv0B6D3YtqH03ah1IwwO1Gkq7Y2uLkR2tLv2NrvWLypfPxDu_eDJg" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-Execution_Flow-orange?style=for-the-badge" alt="Download Execution Flow Diagram">
-</a>
-
 ```mermaid
 sequenceDiagram
     participant User
@@ -271,10 +257,6 @@ sequenceDiagram
 
 ## 🔧 Tool Dependencies
 
-<a href="https://mermaid.live/view#pako:eNp1UkFOwzAQ_MrKcwGTpE3zpH0CElJLlZAqcRs_eJ2Na8WreMPQ9vWsk4CKCr3Znd2ZnRmfnExSd0gGUk0k20CoYSlYEWvVJRuwtLY5bTRqS8TJGGFAKCAFPPz4wcSsyKRhglDgs4FhMwNhOz8A44k8qP3Rfuzrr_M7zk9Q9QvkApHcQaMlZtaW9pHAOtodIYbF_w1qI5wdE8or4VouIJSaNeWXV8LoW1ofNDiKcvMuVCjApKBySJRKpCu8I5o5TJThOTZZgnZOmKeLaxvJ--hdRJnxSm0_GCyIQcmEOjZeFQSrM69tZRbX3qLYnVmTytgIVd9VxlyIUog_IabKNKqamHFtV9DJYUyJkgaFF4gAJGpb731mXMgm8aBokmeWRhIyvpQlxSwjNXDHdJSopN6AEIJS66cr3V3dwb6LVyINosvb65vbdMavby7uk9vk-tYe0CmnNdCN_lSAwCYYv5YvKXv0B6D3YtqH03ah1IwwO1Gkq7Y2uLkR2tLv2NrvWLypfPxDu_eDJg" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-Dependencies_Mindmap-red?style=for-the-badge" alt="Download Dependencies Diagram">
-</a>
-
 ```mermaid
 mindmap
   root((DocumentAI-Prep))
@@ -306,10 +288,6 @@ mindmap
 ```
 
 ## 📈 Performance Optimization Flow
-
-<a href="https://mermaid.live/view#pako:eNp1UkFOwzAQ_MrKcwGTpE3zpH0CElJLlZAqcRs_eJ2Na8WreMPQ9vWsk4CKCr3Znd2ZnRmfnExSd0gGUk0k20CoYSlYEWvVJRuwtLY5bTRqS8TJGGFAKCAFPPz4wcSsyKRhglDgs4FhMwNhOz8A44k8qP3Rfuzrr_M7zk9Q9QvkApHcQaMlZtaW9pHAOtodIYbF_w1qI5wdE8or4VouIJSaNeWXV8LoW1ofNDiKcvMuVCjApKBySJRKpCu8I5o5TJThOTZZgnZOmKeLaxvJ--hdRJnxSm0_GCyIQcmEOjZeFQSrM69tZRbX3qLYnVmTytgIVd9VxlyIUog_IabKNKqamHFtV9DJYUyJkgaFF4gAJGpb731mXMgm8aBokmeWRhIyvpQlxSwjNXDHdJSopN6AEIJS66cr3V3dwb6LVyINosvb65vbdMavby7uk9vk-tYe0CmnNdCN_lSAwCYYv5YvKXv0B6D3YtqH03ah1IwwO1Gkq7Y2uLkR2tLv2NrvWLypfPxDu_eDJg" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-Performance_Optimization-teal?style=for-the-badge" alt="Download Performance Optimization Diagram">
-</a>
 
 ```mermaid
 flowchart TD
