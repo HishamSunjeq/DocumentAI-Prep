@@ -6,7 +6,7 @@ A complete, GPU-accelerated pipeline for processing business documents and gener
 
 ## Installation & Setup
 
-### Setup guide: [Setup Guide](doc/setup_guide.md)
+### Setup guide: [Setup Guide](docs/setup_guide.md)
 
 ## 🚀 Quick Start
 
