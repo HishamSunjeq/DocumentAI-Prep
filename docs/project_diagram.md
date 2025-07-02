@@ -4,13 +4,16 @@
 
 [![Download Pipeline Flow Diagram](https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge)](../diagrams/pipeline_flow.png)
 
-<img src="../diagrams/pipeline_flow.png" alt="Pipeline Flow Diagram" style="max-width: 100%; border: 1px solid #ccc; margin-top: 1em;">
+<img src="../diagrams/pipeline_flow.png" alt="Pipeline Flow Diagram" style="max-width: 100%; border: 1px solid #ccc; margin-top: 1em;" />
+
+```mermaid
+
 flowchart TD
-    %% Input Layer
-    A[📄 Input Documents<br/>data/] --> B{📋 File Types}
-    B --> B1[📄 PDF Files]
-    B --> B2[📄 DOCX Files]
-    B --> B3[📄 PPTX Files]
+%% Input Layer
+A[📄 Input Documents<br/>data/] --> B{📋 File Types}
+B --> B1[📄 PDF Files]
+B --> B2[📄 DOCX Files]
+B --> B3[📄 PPTX Files]
 
     %% Step 1: Inspection
     B1 --> C[🔍 Step 1: File Inspection<br/>inspection_agent.py]
@@ -58,7 +61,7 @@ flowchart TD
     class B,E1,G1 decision
     class K final
 
-````
+```
 
 ## 🏗️ System Architecture Diagram
 
@@ -166,7 +169,7 @@ graph TB
     class MAIN,INSP,OCR,CHUNK,QA,CLEAN,FIX,TEST,TESTGPU processing
     class OLLAMA,SENT,TESSERACT ai
     class GPU,CPU,MEM hardware
-````
+```
 
 ## 📊 Data Flow & File Structure
 
