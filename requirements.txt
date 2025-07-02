@@ -1,0 +1,23 @@
+pdfplumber
+PyPDF2
+pandas
+numpy
+python-docx
+python-pptx
+python-dotenv
+ollama
+pytesseract
+Pillow
+tesseract
+tqdm
+langchain
+requests
+psutil
+
+# Optional dependencies for different embedding methods
+# For SentenceTransformer embeddings (install if using EMBEDDING_TYPE=sentence_transformer)
+sentence-transformers
+
+# For advanced GPU acceleration (optional)
+# torch
+# transformers
