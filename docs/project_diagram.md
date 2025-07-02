@@ -2,9 +2,7 @@
 
 ## 🔄 Complete Pipeline Flow Diagram
 
-<a href="https://mermaid.live/edit#pako:eNqVVE1vwjAM_StRzgM6xqAf4sKQoGjbpGnauE0cTOI2HokT0mRj6vbf16R8qIDNHHrw-9n2s58zEy3HZCBJrfgGQgNLQXJfqzrYgKO1t91sFGpLxNEEYUAoIAU8_PjBxKzIpGGCUOCzgWEzA2G7PwDjE7nI5_NoLpPZxb2FnVg7-n1DLhDJHTRaYmZtaR8JrKPdEWJY_N-gNsLZMaG8Eq7lAkKpWVN-eSWMvqX1QYOjKDfvQoUCTAoqh0SpRLrCO6KZw0QZnmOTJWjnhHm6uLaRvI_eRZQZr9T2g8GCGJRMqGPjVUGwOvPaVmZx7S2K3Zk1qYyNUPVdZcyFKIX4E2KqTKOqiZnXdgWdHMaUKGlQeIEIQKK29d5nxoVsEg-KJlm2NZKQ8aUsKWYZqYE7pqNEJfUGhBBkWz9d6e7qDvZdvBJpEF3eXt_cpjN-fXNxn9wm1zf2gE45rYFO9KcCBDbB-LV8SdmjPwC9F9M-nLYLpWaE2YkiXbW1wY2N0JZ-x9Z-x-JN5eMf2r0fNAn" target="_blank">
-  <img src="https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge" alt="Download Pipeline Flow Diagram">
-</a>
+![Pipeline Flow](docs/diagrams/pipeline_flow.png)
 
 ```mermaid
 flowchart TD
