@@ -1,0 +1,363 @@
+# DocumentAI-Prep Project Architecture Diagram
+
+## 🔄 Complete Pipeline Flow Diagram
+
+```mermaid
+flowchart TD
+    %% Input Layer
+    A[📄 Input Documents<br/>data/] --> B{📋 File Types}
+    B --> B1[📄 PDF Files]
+    B --> B2[📄 DOCX Files]
+    B --> B3[📄 PPTX Files]
+
+    %% Step 1: Inspection
+    B1 --> C[🔍 Step 1: File Inspection<br/>inspection_agent.py]
+    B2 --> C
+    B3 --> C
+    C --> C1[📊 Metadata Validation<br/>output/step1-metadata_data.json]
+
+    %% Step 2: OCR
+    C1 --> D[🔤 Step 2: Text Extraction<br/>OCR_Extractor.py]
+    D --> D1[📝 Plain Text Files<br/>output/ocr_output/]
+
+    %% Step 3: Chunking
+    D1 --> E[✂️ Step 3: Text Chunking<br/>split_text_chunks.py]
+    E --> E1{🧠 Embedding Type}
+    E1 --> E2[🤖 Sentence Transformer<br/>Local Processing]
+    E1 --> E3[🌐 Ollama<br/>GPU Accelerated]
+    E2 --> F[📦 Chunked Text + Embeddings<br/>output/chunked_output/]
+    E3 --> F
+
+    %% Step 4: QA Generation
+    F --> G[❓ Step 4: QA Generation<br/>generate_qa.py]
+    G --> G1{🎮 GPU Check}
+    G1 --> G2[🚀 GPU Available<br/>Fast Processing]
+    G1 --> G3[🐌 CPU Fallback<br/>Slower Processing]
+    G2 --> H[💬 Q&A Pairs<br/>output/qa_pairs/]
+    G3 --> H
+
+    %% Step 5: Cleaning
+    H --> I[🧹 Step 5: Output Cleaning<br/>remove_metadata_fromjson.py]
+    I --> J[✨ Clean Training Data<br/>output/cleaned_json_output/]
+
+    %% Final Output
+    J --> K[🎯 Final Output<br/>Training-Ready Dataset]
+
+    %% Styling
+    classDef inputFiles fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef processing fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef output fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef decision fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef final fill:#fce4ec,stroke:#880e4f,stroke-width:3px
+
+    class A,B,B1,B2,B3 inputFiles
+    class C,D,E,G,I processing
+    class C1,D1,F,H,J output
+    class B,E1,G1 decision
+    class K final
+```
+
+## 🏗️ System Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph "🖥️ System Environment"
+        subgraph "🐍 Python Environment"
+            ENV[data_prep_venv/<br/>Virtual Environment]
+            REQ[requirements.txt<br/>Dependencies]
+        end
+
+        subgraph "⚙️ Configuration"
+            CONF[.env File<br/>Settings & GPU Config]
+            BAT[🔧 Batch Scripts<br/>setup_data_prep.bat<br/>start_data_prep.bat]
+        end
+
+        subgraph "🎮 Hardware Layer"
+            GPU[🎮 NVIDIA GPU<br/>CUDA Acceleration]
+            CPU[💻 CPU<br/>Fallback Processing]
+            MEM[🧠 RAM<br/>8GB+ Required]
+        end
+    end
+
+    subgraph "📁 Data Layer"
+        INPUT[📂 data/<br/>Source Documents]
+        OUTPUT[📂 output/<br/>Processed Results]
+        MODELS[🤖 models/<br/>AI Models Cache]
+
+        subgraph "📊 Output Structure"
+            OUT1[📋 step1-metadata_data.json]
+            OUT2[📝 ocr_output/]
+            OUT3[📦 chunked_output/]
+            OUT4[💬 qa_pairs/]
+            OUT5[✨ cleaned_json_output/]
+        end
+    end
+
+    subgraph "🔧 Processing Layer"
+        MAIN[🚀 main.py<br/>Pipeline Controller]
+
+        subgraph "📝 Core Modules"
+            INSP[🔍 inspection_agent.py]
+            OCR[🔤 OCR_Extractor.py]
+            CHUNK[✂️ split_text_chunks.py]
+            QA[❓ generate_qa.py]
+            CLEAN[🧹 remove_metadata_fromjson.py]
+        end
+
+        subgraph "🛠️ Utility Modules"
+            FIX[🔧 fix_ollama_gpu.py]
+            TEST[🧪 test_ollama_connection.py]
+            TESTGPU[🎮 test_gpu_selection.py]
+        end
+    end
+
+    subgraph "🤖 AI Services"
+        OLLAMA[🦙 Ollama<br/>Local LLM Server]
+        SENT[🧠 Sentence Transformers<br/>Embedding Models]
+        TESSERACT[👁️ Tesseract OCR<br/>Text Recognition]
+    end
+
+    %% Connections
+    CONF --> MAIN
+    ENV --> MAIN
+    INPUT --> MAIN
+    MAIN --> INSP
+    MAIN --> OCR
+    MAIN --> CHUNK
+    MAIN --> QA
+    MAIN --> CLEAN
+
+    INSP --> OUT1
+    OCR --> OUT2
+    CHUNK --> OUT3
+    QA --> OUT4
+    CLEAN --> OUT5
+
+    OCR --> TESSERACT
+    CHUNK --> SENT
+    QA --> OLLAMA
+
+    GPU --> OLLAMA
+    CPU --> OLLAMA
+    GPU --> SENT
+
+    FIX --> OLLAMA
+    TEST --> OLLAMA
+    TESTGPU --> GPU
+
+    %% Styling
+    classDef environment fill:#e3f2fd,stroke:#0277bd,stroke-width:2px
+    classDef data fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef processing fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef ai fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef hardware fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+
+    class ENV,REQ,CONF,BAT environment
+    class INPUT,OUTPUT,MODELS,OUT1,OUT2,OUT3,OUT4,OUT5 data
+    class MAIN,INSP,OCR,CHUNK,QA,CLEAN,FIX,TEST,TESTGPU processing
+    class OLLAMA,SENT,TESSERACT ai
+    class GPU,CPU,MEM hardware
+```
+
+## 📊 Data Flow & File Structure
+
+```mermaid
+graph LR
+    subgraph "📥 Input Layer"
+        PDF[📄 PDF Documents]
+        DOCX[📄 Word Documents]
+        PPTX[📄 PowerPoint Files]
+    end
+
+    subgraph "🔄 Processing Pipeline"
+        S1[🔍 Step 1<br/>Inspection]
+        S2[🔤 Step 2<br/>OCR Extraction]
+        S3[✂️ Step 3<br/>Text Chunking]
+        S4[❓ Step 4<br/>QA Generation]
+        S5[🧹 Step 5<br/>Cleaning]
+    end
+
+    subgraph "📤 Output Layer"
+        META[📊 Metadata JSON]
+        TEXT[📝 Text Files]
+        CHUNKS[📦 Embedded Chunks]
+        QA_PAIRS[💬 Q&A Pairs]
+        CLEAN_DATA[✨ Clean Dataset]
+    end
+
+    %% Flow connections
+    PDF --> S1
+    DOCX --> S1
+    PPTX --> S1
+
+    S1 --> META
+    S1 --> S2
+    S2 --> TEXT
+    S2 --> S3
+    S3 --> CHUNKS
+    S3 --> S4
+    S4 --> QA_PAIRS
+    S4 --> S5
+    S5 --> CLEAN_DATA
+
+    %% Styling
+    classDef input fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef output fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+
+    class PDF,DOCX,PPTX input
+    class S1,S2,S3,S4,S5 process
+    class META,TEXT,CHUNKS,QA_PAIRS,CLEAN_DATA output
+```
+
+## 🚀 Execution Flow Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Setup as setup_data_prep.bat
+    participant Main as start_data_prep.bat
+    participant Pipeline as main.py
+    participant GPU as GPU Check
+    participant Steps as Processing Steps
+    participant Output as Output Files
+
+    User->>Setup: 🔧 First-time setup
+    Setup->>Setup: Install dependencies
+    Setup->>Setup: Configure environment
+    Setup-->>User: ✅ Setup complete
+
+    User->>Main: 🚀 Run pipeline
+    Main->>Pipeline: Execute main.py
+
+    Pipeline->>GPU: 🎮 Check GPU status
+    GPU-->>Pipeline: GPU available/CPU fallback
+
+    Pipeline->>Steps: Step 1: File Inspection
+    Steps-->>Output: metadata_data.json
+
+    Pipeline->>Steps: Step 2: OCR Extraction
+    Steps-->>Output: Text files
+
+    Pipeline->>Steps: Step 3: Text Chunking
+    Steps-->>Output: Embedded chunks
+
+    Pipeline->>Steps: Step 4: QA Generation
+    Steps-->>Output: Q&A pairs
+
+    Pipeline->>Steps: Step 5: Cleaning
+    Steps-->>Output: Clean dataset
+
+    Pipeline-->>User: ✅ Pipeline complete
+```
+
+## 🔧 Tool Dependencies
+
+```mermaid
+mindmap
+  root((DocumentAI-Prep))
+    🐍 Python Core
+      📦 Dependencies
+        🔤 pdfplumber
+        📝 python-docx
+        📊 python-pptx
+        👁️ pytesseract
+        🧠 sentence-transformers
+        🌐 requests
+        📋 pandas
+        🔧 python-dotenv
+    🤖 AI Services
+      🦙 Ollama
+        🎯 Mistral Model
+        🎮 GPU Acceleration
+      🧠 Sentence Transformers
+        📊 all-MiniLM-L6-v2
+        🔍 multi-qa-MiniLM-L6-cos-v1
+      👁️ Tesseract OCR
+        🖼️ Image Processing
+        📝 Text Recognition
+    🖥️ System Tools
+      🎮 NVIDIA Drivers
+      🔧 CUDA Toolkit
+      📊 nvidia-smi
+      🐚 PowerShell
+```
+
+## 📈 Performance Optimization Flow
+
+```mermaid
+flowchart TD
+    START[🚀 Pipeline Start] --> GPU_CHECK{🎮 GPU Available?}
+
+    GPU_CHECK -->|Yes| GPU_PATH[🚀 GPU Accelerated Path]
+    GPU_CHECK -->|No| CPU_PATH[🐌 CPU Fallback Path]
+
+    GPU_PATH --> GPU_OCR[⚡ Fast OCR Processing]
+    GPU_PATH --> GPU_EMBED[⚡ GPU Embeddings]
+    GPU_PATH --> GPU_QA[⚡ GPU QA Generation]
+
+    CPU_PATH --> CPU_OCR[🐌 Standard OCR]
+    CPU_PATH --> CPU_EMBED[🐌 CPU Embeddings]
+    CPU_PATH --> CPU_QA[🐌 CPU QA Generation]
+
+    GPU_OCR --> BATCH_PROC[📊 Batch Processing]
+    CPU_OCR --> BATCH_PROC
+
+    GPU_EMBED --> PARALLEL[⚡ Parallel Processing]
+    CPU_EMBED --> SERIAL[🔄 Serial Processing]
+
+    GPU_QA --> FAST_COMPLETE[✅ Fast Completion]
+    CPU_QA --> SLOW_COMPLETE[✅ Slow Completion]
+
+    BATCH_PROC --> MONITOR[📊 Progress Monitoring]
+    PARALLEL --> MONITOR
+    SERIAL --> MONITOR
+
+    MONITOR --> FAST_COMPLETE
+    MONITOR --> SLOW_COMPLETE
+
+    FAST_COMPLETE --> RESULTS[🎯 Final Results]
+    SLOW_COMPLETE --> RESULTS
+
+    %% Styling
+    classDef gpu fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    classDef cpu fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    classDef process fill:#e1bee7,stroke:#8e24aa,stroke-width:2px
+    classDef result fill:#dcedc8,stroke:#689f38,stroke-width:3px
+
+    class GPU_PATH,GPU_OCR,GPU_EMBED,GPU_QA,PARALLEL,FAST_COMPLETE gpu
+    class CPU_PATH,CPU_OCR,CPU_EMBED,CPU_QA,SERIAL,SLOW_COMPLETE cpu
+    class BATCH_PROC,MONITOR process
+    class RESULTS result
+```
+
+## 📝 Quick Reference
+
+### 🚀 Running the Pipeline
+
+1. **Setup**: `setup_data_prep.bat` (one-time)
+2. **Execute**: `start_data_prep.bat` (main pipeline)
+3. **Monitor**: Check console output for progress
+4. **Results**: Find outputs in `output/` folder
+
+### 🔧 Troubleshooting Tools
+
+- `fix_ollama_gpu.py` - Fix GPU issues
+- `test_ollama_connection.py` - Test AI model
+- `test_gpu_selection.py` - GPU diagnostics
+
+### 📁 Key Directories
+
+- `data/` - Input documents
+- `output/` - All processed results
+- `models/` - Cached AI models
+- `docs/` - Documentation
+
+### ⚙️ Configuration
+
+Edit `.env` file to customize:
+
+- AI models and settings
+- GPU configuration
+- Processing parameters
+- Batch sizes and performance tuning
