@@ -44,11 +44,11 @@ flowchart TD
     J --> K[🎯 Final Output<br/>Training-Ready Dataset]
 
     %% Styling
-    classDef inputFiles fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef processing fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef output fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef decision fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef final fill:#fce4ec,stroke:#880e4f,stroke-width:3px
+    classDef inputFiles fill:#cce5ff,stroke:#0066cc,stroke-width:3px,color:#000000
+    classDef processing fill:#e6ccff,stroke:#6600cc,stroke-width:3px,color:#000000
+    classDef output fill:#ccffcc,stroke:#009900,stroke-width:3px,color:#000000
+    classDef decision fill:#ffffcc,stroke:#cc9900,stroke-width:3px,color:#000000
+    classDef final fill:#ffcccc,stroke:#cc0000,stroke-width:4px,color:#000000
 
     class A,B,B1,B2,B3 inputFiles
     class C,D,E,G,I processing
@@ -146,11 +146,11 @@ graph TB
     TESTGPU --> GPU
 
     %% Styling
-    classDef environment fill:#e3f2fd,stroke:#0277bd,stroke-width:2px
-    classDef data fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-    classDef processing fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef ai fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    classDef hardware fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef environment fill:#e6f3ff,stroke:#0066cc,stroke-width:3px,color:#000000
+    classDef data fill:#e6ffe6,stroke:#009900,stroke-width:3px,color:#000000
+    classDef processing fill:#ffe6f3,stroke:#cc0066,stroke-width:3px,color:#000000
+    classDef ai fill:#fff3e6,stroke:#ff6600,stroke-width:3px,color:#000000
+    classDef hardware fill:#f3e6ff,stroke:#6600cc,stroke-width:3px,color:#000000
 
     class ENV,REQ,CONF,BAT environment
     class INPUT,OUTPUT,MODELS,OUT1,OUT2,OUT3,OUT4,OUT5 data
@@ -201,9 +201,9 @@ graph LR
     S5 --> CLEAN_DATA
 
     %% Styling
-    classDef input fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef output fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef input fill:#cce5ff,stroke:#0066cc,stroke-width:3px,color:#000000
+    classDef process fill:#e6ccff,stroke:#6600cc,stroke-width:3px,color:#000000
+    classDef output fill:#ccffcc,stroke:#009900,stroke-width:3px,color:#000000
 
     class PDF,DOCX,PPTX input
     class S1,S2,S3,S4,S5 process
@@ -320,10 +320,10 @@ flowchart TD
     SLOW_COMPLETE --> RESULTS
 
     %% Styling
-    classDef gpu fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
-    classDef cpu fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    classDef process fill:#e1bee7,stroke:#8e24aa,stroke-width:2px
-    classDef result fill:#dcedc8,stroke:#689f38,stroke-width:3px
+    classDef gpu fill:#ccffcc,stroke:#009900,stroke-width:3px,color:#000000
+    classDef cpu fill:#ffcccc,stroke:#cc0000,stroke-width:3px,color:#000000
+    classDef process fill:#e6ccff,stroke:#6600cc,stroke-width:3px,color:#000000
+    classDef result fill:#ffffcc,stroke:#cc9900,stroke-width:4px,color:#000000
 
     class GPU_PATH,GPU_OCR,GPU_EMBED,GPU_QA,PARALLEL,FAST_COMPLETE gpu
     class CPU_PATH,CPU_OCR,CPU_EMBED,CPU_QA,SERIAL,SLOW_COMPLETE cpu
