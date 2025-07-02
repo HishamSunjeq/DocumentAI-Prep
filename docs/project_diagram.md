@@ -2,9 +2,7 @@
 
 ## 🔄 Complete Pipeline Flow Diagram
 
-[![Download Pipeline Flow Diagram](https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge)](../diagrams/pipeline_flow.png)
-
-<img src="../diagrams/pipeline_flow.png" alt="Pipeline Flow Diagram" style="max-width: 100%; border: 1px solid #ccc; margin-top: 1em;" />
+[![Download Pipeline Flow Diagram](https://img.shields.io/badge/📥_Download-Pipeline_Flow_Diagram-blue?style=for-the-badge)](../docs/diagrams/pipeline_flow.png)
 
 ```mermaid
 
