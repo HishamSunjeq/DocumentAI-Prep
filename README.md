@@ -141,5 +141,3 @@ Perfect for troubleshooting and optimization!
 - Ensure all requirements are installed via setup script
 
 ---
-
-_Built by Bayanat for advanced document processing and chatbot training_
