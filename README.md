@@ -28,6 +28,16 @@ A complete, GPU-accelerated pipeline for processing business documents and gener
 
 4. **Get results** from the `output/` folder
 
+### 🖥️ GUI Option
+
+Prefer a graphical interface? Launch the GUI to configure folders and run each step:
+
+```bash
+python data_prep_gui.py
+```
+
+On Windows you can double-click `launch_data_prep_gui.bat`.
+
 ## 📁 Project Structure
 
 ```
