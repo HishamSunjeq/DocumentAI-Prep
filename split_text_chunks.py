@@ -453,7 +453,7 @@ def get_embedding(text, embedding_type=None, model_name=None):
     else:  # Default to ollama
         if model_name is None:
             model_name = OLLAMA_MODEL_NAME
-        return get_olloma_embedding(text, model_name, OLLAMA_URL)
+        return get_ollama_embedding(text, model_name, OLLAMA_URL)
 
 if __name__ == "__main__":
     print("✨ Welcome to the SUPER FAST Text Processor & Vectorizer! ✨")
